@@ -33,5 +33,25 @@ namespace Calculator
             return exp;
         }
 
+        public double Sqrt (double x)
+        {
+            double sqrt = Math.Sqrt(x);
+            return sqrt;
+        }
+
+        public double Factorial (int x)
+        {
+            double result = 1;
+
+            while (x != 1)
+            {
+                result = x * x;
+                x = x - 1;
+            }
+
+            return result;
+        }
+
+
     }
 }
