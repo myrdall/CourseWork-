@@ -1,13 +1,12 @@
 language: csharp
 solution: ./Calculator/Calculator.sln
-dotnet: 2.1.4
 sudo: false
-mono:
-  - latest
+
+install:
+  - nuget restore ./Calculator/Calculator.sln
 
 script:
-  - dotnet build Calculator/Calculator.sln -c Release
-  - dotnet test -c Release --no-build ./Calculator/Calculator/Test/Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+  - xbuild /p:Configuration=Release ./Calculator/Calculator.sln /p:TargetFrameworkVersion="v4.6"
 
 after_script:
         - bash <(curl -s https://codecov.io/bash)
