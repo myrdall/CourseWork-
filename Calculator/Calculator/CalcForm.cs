@@ -22,9 +22,7 @@ namespace Calculator
         }
 
         private void SummButton_Click(object sender, EventArgs e)
-        {
-           
-
+        { 
             if (displayX.Text == "")
             {
                 MessageBox.Show("Введите число");
@@ -37,8 +35,6 @@ namespace Calculator
             double x = double.Parse(displayX.Text);
             double y = double.Parse(displayY.Text); ;
 
-
-
             CalcFinction s = new CalcFinction();
 
             double result = s.Summ(x, y);
@@ -48,8 +44,6 @@ namespace Calculator
             displayAnswer.Text = result.ToString();
 
             displayX.Clear(); displayY.Clear();
-
-
         }
 
         private void DisplayX_KeyPress(object sender, KeyPressEventArgs e)
