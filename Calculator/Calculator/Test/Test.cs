@@ -53,10 +53,10 @@ namespace Calculator
         {
             //arrage
 
-            double x = 2.5;
-            double y = 2.5;
+            double x = -12.5;
+            double y = 2;
 
-            int expected = 5;
+            double expected = -10.5;
 
             //act
 
@@ -110,6 +110,8 @@ namespace Calculator
 
             Assert.AreEqual(expected, actual);
         }
+        
+         
 
     }
 }

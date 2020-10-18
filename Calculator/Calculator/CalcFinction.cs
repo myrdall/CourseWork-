@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Calculator
 {
@@ -52,6 +53,43 @@ namespace Calculator
             }
         }
 
+        public double Log(double x, double y)
+        {
+            double log = Math.Log(x, y);
+            return log;
+        }
 
+        public double Log10(double x)
+        {
+            double log10 = Math.Log(x);
+            return log10;
+        }
+
+        //Triganometric
+        public double Cos (double x)
+        {
+            double cos = Math.Cos(x);
+            return cos;
+        }
+
+        public double Sin (double x)
+        {
+            double sin = Math.Sin(x);
+            return sin;
+        }
+
+        public double Tg (double x)
+        {
+            double tg = Math.Tan(x);
+            return tg;
+        }
+
+        public double Ctg (double x)
+        {
+            double ctg = 1 / Math.Tan(x);
+            return ctg;
+        }
     }
+
+  
 }

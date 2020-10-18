@@ -51,6 +51,7 @@
             this.displayX.Name = "displayX";
             this.displayX.Size = new System.Drawing.Size(223, 35);
             this.displayX.TabIndex = 1;
+            this.displayX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DisplayX_KeyPress);
             // 
             // displayY
             // 
@@ -59,6 +60,7 @@
             this.displayY.Name = "displayY";
             this.displayY.Size = new System.Drawing.Size(223, 35);
             this.displayY.TabIndex = 2;
+            this.displayY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DisplayY_KeyPress);
             // 
             // displayAnswer
             // 
@@ -72,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 376);
+            this.ClientSize = new System.Drawing.Size(356, 376);
             this.Controls.Add(this.displayAnswer);
             this.Controls.Add(this.displayY);
             this.Controls.Add(this.displayX);
