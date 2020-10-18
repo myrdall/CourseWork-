@@ -1,12 +1,10 @@
 language: csharp
-solution: ./Calculator/Calculator.sln
-sudo: false
-
+solution: Calculator/Calculator.sln
 install:
-  - nuget restore ./Calculator/Calculator.sln
-
+  - nuget restore Calculator/Calculator.sln
+  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release ./Calculator/Calculator.sln /p:TargetFrameworkVersion="v4.6"
-
+  - xbuild /p:Configuration=Release Calculator/Calculator.sln /p:TargetFrameworkVersion="v4.6"
+  - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Calculator/Test/bin/Release/Test.dll
 after_script:
         - bash <(curl -s https://codecov.io/bash)
