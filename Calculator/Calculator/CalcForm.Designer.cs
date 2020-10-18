@@ -31,7 +31,6 @@
             this.summButton = new System.Windows.Forms.Button();
             this.displayX = new System.Windows.Forms.TextBox();
             this.displayY = new System.Windows.Forms.TextBox();
-            this.displayAnswer = new System.Windows.Forms.TextBox();
             this.subButton = new System.Windows.Forms.Button();
             this.multButton = new System.Windows.Forms.Button();
             this.divButton = new System.Windows.Forms.Button();
@@ -75,15 +74,6 @@
             this.displayY.Size = new System.Drawing.Size(242, 78);
             this.displayY.TabIndex = 2;
             this.displayY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DisplayY_KeyPress);
-            // 
-            // displayAnswer
-            // 
-            this.displayAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.displayAnswer.Location = new System.Drawing.Point(53, 535);
-            this.displayAnswer.Multiline = true;
-            this.displayAnswer.Name = "displayAnswer";
-            this.displayAnswer.Size = new System.Drawing.Size(376, 59);
-            this.displayAnswer.TabIndex = 3;
             // 
             // subButton
             // 
@@ -218,7 +208,6 @@
             this.Controls.Add(this.divButton);
             this.Controls.Add(this.multButton);
             this.Controls.Add(this.subButton);
-            this.Controls.Add(this.displayAnswer);
             this.Controls.Add(this.displayY);
             this.Controls.Add(this.displayX);
             this.Controls.Add(this.summButton);
@@ -235,7 +224,6 @@
         private System.Windows.Forms.Button summButton;
         private System.Windows.Forms.TextBox displayX;
         private System.Windows.Forms.TextBox displayY;
-        private System.Windows.Forms.TextBox displayAnswer;
         private System.Windows.Forms.Button subButton;
         private System.Windows.Forms.Button multButton;
         private System.Windows.Forms.Button divButton;

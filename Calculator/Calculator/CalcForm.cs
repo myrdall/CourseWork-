@@ -14,6 +14,8 @@ namespace Calculator
         public CalcForm()
         {
             InitializeComponent();
+
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,42 +25,14 @@ namespace Calculator
 
         private void SummButton_Click(object sender, EventArgs e)
         {
+          
             CalcFinction s = new CalcFinction();
             displayX.Text = Convert.ToString(s.Summ(Convert.ToDouble(displayX.Text),
                 Convert.ToDouble(displayY.Text)));
             displayY.Clear();
         }
 
-        private void DisplayX_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) ||
-            (!string.IsNullOrEmpty(displayX.Text) && e.KeyChar == ','))
-            {
-                return;
-            }
-            if(e.KeyChar == (char)8)
-            {
-                return;
-            }
-
-            e.Handled = true;
-        }
-
-        private void DisplayY_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsNumber(e.KeyChar) ||
-          (!string.IsNullOrEmpty(displayX.Text) && e.KeyChar == ','))
-            {
-                return;
-            }
-            if (e.KeyChar == (char)8)
-            {
-                return;
-            }
-
-            e.Handled = true;
-        }
-
+        
         private void SubButton_Click(object sender, EventArgs e)
         {
             CalcFinction s = new CalcFinction();
@@ -119,5 +93,36 @@ namespace Calculator
             displayX.Text = Convert.ToString(s.Log10(Convert.ToInt32(displayX.Text)));
             displayY.Clear();
         }
+
+        private void DisplayX_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar) ||
+            (!string.IsNullOrEmpty(displayY.Text) && e.KeyChar == ','))
+            {
+                return;
+            }
+            if (e.KeyChar == (char)8)
+            {
+                return;
+            }
+
+            e.Handled = true;
+        }
+
+        private void DisplayY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar) ||
+          (!string.IsNullOrEmpty(displayX.Text) && e.KeyChar == ','))
+            {
+                return;
+            }
+            if (e.KeyChar == (char)8)
+            {
+                return;
+            }
+
+            e.Handled = true;
+        }
+
     }
 }
