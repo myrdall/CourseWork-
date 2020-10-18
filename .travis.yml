@@ -6,4 +6,4 @@ script:
    - dotnet add package MSTest.TestFramework --version 2.1.2
    - dotnet restore Calculator/Calculator.sln
    - msbuild /p:Configuration=Release Calculator/Calculator.sln
-   - dotnet test Calculator/Calculator/Test/bin/Debug/tests.dll
+   - dotnet test Calculator/Calculator/Test/bin/Debug/Test.dll
