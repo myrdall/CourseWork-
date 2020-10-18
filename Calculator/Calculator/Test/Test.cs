@@ -89,16 +89,16 @@ namespace Calculator
 
             Assert.AreEqual(expected, actual);
         }
-/*
+
         [TestMethod]
-       *//* public void SubTest_forDouble_x10dot5_y2dot5_expected_8()
+        public void SubTest_forDouble_x10dot5_y2dot5_expected_8()
         {
             //arrage
 
             double x = 10.5;
             double y = 2.5;
 
-            int expected = 8;
+            double expected = 8;
 
             //act
 
@@ -109,7 +109,7 @@ namespace Calculator
             //assert
 
             Assert.AreEqual(expected, actual);
-        }*/
+        }
 
     }
 }
