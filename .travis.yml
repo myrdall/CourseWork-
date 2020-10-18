@@ -1,5 +1,5 @@
 language: csharp
-solution: Calculator.sln
+solution: ./Calculator/Calculator.sln
 dotnet: 2.1.4
 sudo: false
 mono:
@@ -7,7 +7,7 @@ mono:
 
 script:
   - dotnet build Calculator/Calculator.sln -c Release
-  - dotnet test -c Release --no-build Calculator/Calculator/Test/Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+  - dotnet test -c Release --no-build ./Calculator/Calculator/Test/Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 
 after_script:
         - bash <(curl -s https://codecov.io/bash)
