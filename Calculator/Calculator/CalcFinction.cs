@@ -12,17 +12,17 @@ namespace Calculator
             return x + y;
         }
 
-        public double Sub(int x, int y)
+        public double Sub(double x, double y)
         {
             return x - y;
         }
 
-        public double Mult(int x, int y)
+        public double Mult(double x, double y)
         {
             return x * y;
         }
 
-        public double Div (int x, int y)
+        public double Div (double x, double y)
         {
             return x / y; 
         }
@@ -41,15 +41,15 @@ namespace Calculator
 
         public double Factorial (int x)
         {
-            double result = 1;
-
-            while (x != 1)
+            if (x == 1)
             {
-                result = x * x;
-                x = x - 1;
+                return 1;
             }
-
-            return result;
+            else
+            {
+                double result = x * Factorial(x - 1);
+                return result;
+            }
         }
 
 
