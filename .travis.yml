@@ -1,0 +1,9 @@
+language: csharp
+solution: Calculator.sln
+dotnet: 4.6
+mono:
+  - latest
+
+script:
+  - dotnet build Calculator/Calculator.sln -c Release
+  - dotnet test -c Release --no-build Calculator/Calculator/Test/Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
