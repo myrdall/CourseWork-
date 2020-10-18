@@ -307,13 +307,13 @@ namespace Calculator
             double x = 2;
 
 
-            double expected = 0.909297426;
+            double expected = 0.909297426825682;
 
             //act
 
             CalcFinction s = new CalcFinction();
 
-            double actual = s.Cos(x);
+            double actual = s.Sin(x);
 
             //assert
 
@@ -328,7 +328,7 @@ namespace Calculator
             double x = 2;
 
 
-            double expected = -2.18503986;
+            double expected = -2.18503986326152;
 
             //act
 
