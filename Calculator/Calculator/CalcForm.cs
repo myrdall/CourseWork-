@@ -94,6 +94,41 @@ namespace Calculator
             displayY.Clear();
         }
 
+        private void ClearButton1_Click(object sender, EventArgs e)
+        {
+            displayX.Clear();
+            displayY.Clear();
+        }
+
+        private void CtgButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Ctg(Convert.ToInt32(displayX.Text)));
+            displayY.Clear();
+        }
+
+        private void CosButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Cos(Convert.ToInt32(displayX.Text)));
+            displayY.Clear();
+        }
+
+        private void SinButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Sin(Convert.ToInt32(displayX.Text)));
+            displayY.Clear();
+        }
+
+        private void TgButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Tg(Convert.ToInt32(displayX.Text)));
+            displayY.Clear();
+        }
+
+
         private void DisplayX_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsNumber(e.KeyChar) ||
@@ -123,6 +158,5 @@ namespace Calculator
 
             e.Handled = true;
         }
-
     }
 }

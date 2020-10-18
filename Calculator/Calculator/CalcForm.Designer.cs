@@ -43,6 +43,7 @@
             this.sinButton = new System.Windows.Forms.Button();
             this.tgButton = new System.Windows.Forms.Button();
             this.ctgButton = new System.Windows.Forms.Button();
+            this.clearButton1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // summButton
@@ -183,6 +184,7 @@
             this.cosButton.TabIndex = 12;
             this.cosButton.Text = "cos";
             this.cosButton.UseVisualStyleBackColor = true;
+            this.cosButton.Click += new System.EventHandler(this.CosButton_Click);
             // 
             // sinButton
             // 
@@ -194,6 +196,7 @@
             this.sinButton.TabIndex = 13;
             this.sinButton.Text = "sin";
             this.sinButton.UseVisualStyleBackColor = true;
+            this.sinButton.Click += new System.EventHandler(this.SinButton_Click);
             // 
             // tgButton
             // 
@@ -205,6 +208,7 @@
             this.tgButton.TabIndex = 14;
             this.tgButton.Text = "tg";
             this.tgButton.UseVisualStyleBackColor = true;
+            this.tgButton.Click += new System.EventHandler(this.TgButton_Click);
             // 
             // ctgButton
             // 
@@ -216,12 +220,26 @@
             this.ctgButton.TabIndex = 15;
             this.ctgButton.Text = "ctg";
             this.ctgButton.UseVisualStyleBackColor = true;
+            this.ctgButton.Click += new System.EventHandler(this.CtgButton_Click);
+            // 
+            // clearButton1
+            // 
+            this.clearButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clearButton1.Location = new System.Drawing.Point(448, 145);
+            this.clearButton1.Margin = new System.Windows.Forms.Padding(100);
+            this.clearButton1.Name = "clearButton1";
+            this.clearButton1.Size = new System.Drawing.Size(100, 219);
+            this.clearButton1.TabIndex = 16;
+            this.clearButton1.Text = "CE";
+            this.clearButton1.UseVisualStyleBackColor = true;
+            this.clearButton1.Click += new System.EventHandler(this.ClearButton1_Click);
             // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 500);
+            this.Controls.Add(this.clearButton1);
             this.Controls.Add(this.ctgButton);
             this.Controls.Add(this.tgButton);
             this.Controls.Add(this.sinButton);
@@ -262,6 +280,7 @@
         private System.Windows.Forms.Button sinButton;
         private System.Windows.Forms.Button tgButton;
         private System.Windows.Forms.Button ctgButton;
+        private System.Windows.Forms.Button clearButton1;
     }
 }
 
