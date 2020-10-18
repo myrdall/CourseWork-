@@ -22,28 +22,11 @@ namespace Calculator
         }
 
         private void SummButton_Click(object sender, EventArgs e)
-        { 
-            if (displayX.Text == "")
-            {
-                MessageBox.Show("Введите число");
-            }
-            if (displayY.Text == "")
-            {
-                MessageBox.Show("Введите число");
-            }
-
-            double x = double.Parse(displayX.Text);
-            double y = double.Parse(displayY.Text); ;
-
+        {
             CalcFinction s = new CalcFinction();
-
-            double result = s.Summ(x, y);
-
-            displayAnswer.Clear();
-
-            displayAnswer.Text = result.ToString();
-
-            displayX.Clear(); displayY.Clear();
+            displayX.Text = Convert.ToString(s.Summ(Convert.ToDouble(displayX.Text),
+                Convert.ToDouble(displayY.Text)));
+            displayY.Clear();
         }
 
         private void DisplayX_KeyPress(object sender, KeyPressEventArgs e)
@@ -74,6 +57,67 @@ namespace Calculator
             }
 
             e.Handled = true;
+        }
+
+        private void SubButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Sub(Convert.ToDouble(displayX.Text),
+                Convert.ToDouble(displayY.Text)));
+            displayY.Clear();
+        }
+
+        private void MultButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Mult(Convert.ToDouble(displayX.Text),
+                Convert.ToDouble(displayY.Text)));
+            displayY.Clear();
+        }
+
+        private void DivButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Div(Convert.ToDouble(displayX.Text),
+                Convert.ToDouble(displayY.Text)));
+            displayY.Clear();
+        }
+
+        private void SqrtButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Sqrt(Convert.ToDouble(displayX.Text)));
+            displayY.Clear();
+        }
+
+        private void FactotialButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Factorial(Convert.ToInt32(displayX.Text)));
+            displayY.Clear();
+        }
+
+        private void ExpButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Exp(Convert.ToDouble(displayX.Text),
+                Convert.ToInt32(displayY.Text)));
+            displayY.Clear();
+        }
+
+        private void LogButton_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Log(Convert.ToDouble(displayX.Text),
+                Convert.ToDouble(displayY.Text)));
+            displayY.Clear();
+        }
+
+        private void Log10Button_Click(object sender, EventArgs e)
+        {
+            CalcFinction s = new CalcFinction();
+            displayX.Text = Convert.ToString(s.Log10(Convert.ToInt32(displayX.Text)));
+            displayY.Clear();
         }
     }
 }

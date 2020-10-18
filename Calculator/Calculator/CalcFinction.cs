@@ -8,27 +8,27 @@ namespace Calculator
 {
     public class CalcFinction
     {
-        public double Summ(double x, double y)
+        public  double Summ(double x, double y)
         {
             return x + y;
         }
 
-        public double Sub(double x, double y)
+        public  double Sub(double x, double y)
         {
             return x - y;
         }
 
-        public double Mult(double x, double y)
+        public  double Mult(double x, double y)
         {
             return x * y;
         }
 
-        public double Div (double x, double y)
+        public  double Div (double x, double y)
         {
             return x / y; 
         }
 
-        public double Exp (double x, int pow)
+        public  double Exp (double x, int pow)
         {
             double exp = Math.Pow(x, pow);
             return exp;
