@@ -1,10 +1,9 @@
 language: csharp
 solution: Calculator/Calculator.sln
-install:
-  - nuget restore Calculator/Calculator.sln
-  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
+mono: none
+  
 script:
-  - xbuild /p:Configuration=Release Calculator/Calculator.sln /p:TargetFrameworkVersion="v4.6"
-  - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Calculator/Calculator/Test/bin/Debug/Test.dll
-after_script:
-        - bash <(curl -s https://codecov.io/bash)
+   - dotnet add package MSTest.TestFramework --version 2.1.2
+   - dotnet restore Calculator/Calculator.sln
+   - msbuild /p:Configuration=Release Calculator/Calculator.sln
+   - dotnet test Calculator/Calculator/Test/bin/Debug/tests.dll
